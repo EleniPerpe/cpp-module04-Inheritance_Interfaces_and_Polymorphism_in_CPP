@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 16:50:05 by eperperi         ###   ########.fr       */
+/*   Created: 2024/12/03 13:04:56 by eperperi          #+#    #+#             */
+/*   Updated: 2024/12/03 13:58:03 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 
-#pragma once
+#ifndef NOTBRAIN_HPP
+#define NOTBRAIN_HPP
 
-class Cat : public Animal
+#include <iostream>
+
+class Brain
 {
+	private:
+		std::string _idea[100];
+		
 	public:
-		Cat();
-		Cat(const Cat& copy);
-		~Cat();
-		Cat& operator=(const Cat& copy);
+		Brain();
+		Brain(const Brain& copy);
+		virtual ~Brain();
+		Brain& operator=(const Brain& copy);
 
-		void makeSound() const override;
+		const std::string& getIdea(size_t &index) const;
+		void setIdea(std::string const &idea, size_t &index);
 };
+
+#endif

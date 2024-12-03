@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:04:44 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 15:40:15 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:40:32 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,23 @@ for (int i = 0; i < 100; i++)
 return 0;
 
 }
+
+// int main()
+// {
+//     
+//     Cat originalCat;
+//     originalCat.setIdea(0, "Original idea");
+
+//     
+//     Cat copiedCat = originalCat;
+
+// 
+//     originalCat.setIdea(0, "Modified idea");
+
+//    
+//     std::cout << "Original Cat's idea: " << originalCat.getIdea(0) << std::endl;
+//     std::cout << "Copied Cat's idea: " << copiedCat.getIdea(0) << std::endl;
+
+//     return 0;
+// }
+

@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 16:50:05 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:48:03 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include <iostream>
 
 #pragma once
 
-class Cat : public Animal
+class Animal
 {
+	protected:
+		std::string _type;
 	public:
-		Cat();
-		Cat(const Cat& copy);
-		~Cat();
-		Cat& operator=(const Cat& copy);
+		Animal();
+		Animal(const std::string& type);
+		Animal(const Animal& copy);
+		virtual ~Animal();
+		Animal& operator=(const Animal& copy);
+		
+		std::string getType(void) const;
+		void setType(const std::string& type);
 
-		void makeSound() const override;
+		virtual void makeSound() const = 0;
 };
+

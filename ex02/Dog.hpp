@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 16:50:05 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:49:57 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 
 #pragma once
 
-class Cat : public Animal
+#include "AAnimal.hpp"
+#include "Brain.hpp"
+
+
+class Dog : public Animal
 {
+	private:
+		Brain* _brain;
+		
 	public:
-		Cat();
-		Cat(const Cat& copy);
-		~Cat();
-		Cat& operator=(const Cat& copy);
+		Dog();
+		Dog(const Dog& copy);
+		~Dog();
+		Dog& operator=(const Dog& copy);
 
 		void makeSound() const override;
+
+		const std::string getIdea(size_t index) const;
+		void setIdea(size_t index, const std::string& idea);
 };
