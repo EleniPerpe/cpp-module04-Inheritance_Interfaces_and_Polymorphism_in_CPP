@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:46 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 11:36:46 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/03 15:38:09 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Dog& Dog::operator=(const Dog& copy)
 	Animal::operator = (copy);
 	*this->_brain = *copy._brain;
 	// if (this != &copy)
-	// 	this->type = copy.type;
+	// 	this->_type = copy._type;
 	return *this;
 }
 
@@ -46,4 +46,21 @@ void Dog::makeSound() const
 	std::cout << "Woof! Woof!" << std::endl;
 }
 
-		
+const std::string Dog::getIdea(size_t index) const
+{
+	if (index < 100)
+		return _brain->getIdea(index);
+	else
+	{
+		std::cout << "Dog's brain has only 100 ideas" << std::endl;
+		return NULL;
+	}
+}
+
+void Dog::setIdea(size_t index, const std::string& idea)
+{
+	if (index < 100)
+		_brain->setIdea(idea, index);
+	else
+		std::cout << "Dog's brain has only 100 ideas" << std::endl;
+}

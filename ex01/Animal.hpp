@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/26 17:50:23 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/03 13:00:07 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,4 @@ class Animal
 
 		virtual void makeSound() const;
 };
+
