@@ -6,17 +6,17 @@
 #    By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 15:07:19 by eperperi          #+#    #+#              #
-#    Updated: 2024/11/25 18:38:39 by eperperi         ###   ########.fr        #
+#    Updated: 2024/12/03 10:38:54 by eperperi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	andOpen
+NAME			=	polymorphism
 
 CC				=	c++ #-g -fsanitize=address
 
 CFLAGS			=	-Wall -Werror -Wextra -std=c++11
 
-SRC_FILES		=	main.cpp ClapTrap.cpp
+SRC_FILES		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ_DIR			=	./obj
 
