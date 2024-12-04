@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:45:21 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 12:08:53 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 12:15:09 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,14 @@ Ice::Ice()
 	std::cout << "Ice default contructor called" << std::endl;
 }
 
-Ice::Ice(const Ice& copy) 
+Ice::Ice(const Ice& copy) : AMateria(copy)
 {
-	*this = copy;
 	std::cout << "Ice copy contructor called" << std::endl;
 }
 
 Ice& Ice::operator=(const Ice& copy) 
 {
-	if (this != &copy)
-		this->_type = copy._type;
+	AMateria::operator = (copy);
 	std::cout << "Ice assignement operator called" << std::endl;
 	return *this;
 }

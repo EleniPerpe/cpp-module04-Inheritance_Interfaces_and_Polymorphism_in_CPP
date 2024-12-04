@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 18:19:01 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 12:11:43 by eperperi         ###   ########.fr       */
+/*   Created: 2024/12/04 12:18:01 by eperperi          #+#    #+#             */
+/*   Updated: 2024/12/04 13:14:58 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class ICharacter
+class Character : public ICharacter
 {
+	private:
+		static const size_t _slots = 4;
+		const std::string _name;
+		AMateria* _inventory[_slots];
 	public:
-		virtual ~ICharacter() {}
+		Character();
+		Character(const Character& copy);
+		~Character();
+		Character& operator=(const Character& copy);
+	
 		virtual std::string const & getName() const = 0;
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;

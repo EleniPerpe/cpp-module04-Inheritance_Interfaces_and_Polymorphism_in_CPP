@@ -6,30 +6,32 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 18:17:52 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 12:01:58 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 13:29:23 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria() 
+AMateria::AMateria() : _type("Unknown")
 {
 	std::cout << "AMateria default contructor called" << std::endl;
 }
 
-AMateria::AMateria(const AMateria&)
+AMateria::AMateria(const AMateria& copy)
 {
+	*this = copy;
 	std::cout << "AMateria copy contructor called" << std::endl;
 }
 
 AMateria::AMateria(std::string const & type) : _type(type)
 {
-	// this->_type = type;
 	std::cout << "AMateria with type parameter contructor called" << std::endl;
 }
 
-AMateria& AMateria::operator=(const AMateria&)
+AMateria& AMateria::operator=(const AMateria& copy)
 {
+	if (this != &copy)
+		this->_type = copy._type;
 	std::cout << "AMateria assignement operator called" << std::endl;
 	return *this;
 }
@@ -44,4 +46,7 @@ std::string const & AMateria::getType() const
 	return this->_type;
 }
 
-void AMateria::use(ICharacter& target) {}
+void AMateria::use(ICharacter& target) 
+{
+	std::cout << target.getName() << " is using an unknown materia !" << std::endl;
+}
