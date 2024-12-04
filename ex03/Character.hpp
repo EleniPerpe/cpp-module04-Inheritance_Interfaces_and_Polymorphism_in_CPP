@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:18:01 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 13:14:58 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 13:43:28 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Character : public ICharacter
 	public:
 		Character();
 		Character(const Character& copy);
+		Character(std::string name);
 		~Character();
 		Character& operator=(const Character& copy);
 	

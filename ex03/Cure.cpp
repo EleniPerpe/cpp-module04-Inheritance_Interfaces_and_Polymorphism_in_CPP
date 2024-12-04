@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:45:21 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 12:15:52 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:11:38 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ AMateria* Cure::clone(void) const
 
 void Cure::use(ICharacter& target) 
 {
-	std::cout << "* heals <name>’s wounds *";
+	std::cout << "* heals " << target.getName() <<  "’s wounds *";
 }

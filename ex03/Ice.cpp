@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:45:21 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 12:15:09 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:11:12 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ AMateria* Ice::clone(void) const
 
 void Ice::use(ICharacter& target) 
 {
-	std::cout << "* shoots an ice bolt at <name> *";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *";
 }

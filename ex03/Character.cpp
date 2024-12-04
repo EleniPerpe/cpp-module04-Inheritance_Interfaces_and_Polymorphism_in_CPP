@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:59:28 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 13:38:27 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:34:11 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,56 @@
 
 Character::Character() 
 {
+	for (int i = 0; i < this->_slots; i++)
+		this->_inventory[i] = NULL;
 	std::cout << "Character default constructor called." << std::endl;
 }
 
 Character::Character(const Character& copy)
 {
+	for (int i = 0; i < this->_slots; i++)
+		this->_inventory[i] = NULL;
 	std::cout << "Character copy constructor called." << std::endl;
 	*this = copy;
 }
 
+Character::Character(std::string name) : _name(name)
+{
+	for (int i = 0; i < this->_slots; i++)
+		this->_inventory[i] = NULL;
+	std::cout << "Character constructor wth name parameter called." << std::endl;	
+}
+
 Character::~Character()
 {
+	for (int i = 0; i < this->_slots; i++)
+	{
+		if (this->_inventory[i] != NULL)
+		{
+			delete this->_inventory[i];
+			this->_inventory[i] = NULL;
+		}
+	}
 	std::cout << "Character destructor called." << std::endl;	
 }
 Character& Character::operator=(const Character& copy)
 {
 	if (this != &copy)
 	{
-		
+		this->_name = copy._name;
+		for (int i = 0; i < this->_slots; i++)
+		{
+			if (this->_inventory[i] != NULL)
+			{
+				delete this->_inventory[i];
+				this->_inventory[i] = NULL;
+			}
+		}
+		for (int i = 0; i < this->_slots; i++)
+		{
+			if (copy._inventory[i] != NULL)
+				this->_inventory[i] = copy._inventory[i]->clone();
+		}
 	}
 	std::cout << "Character assignment operator called." << std::endl;
 	return *this;
