@@ -6,13 +6,13 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:18:34 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:23:20 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:47:00 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "IMateriaSource.hpp"
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 	private:
 		static const size_t _slots = 4;

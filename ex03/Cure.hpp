@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:41:35 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 11:50:41 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:59:18 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ class Cure : public AMateria
 		~Cure();
 		Cure& operator=(const Cure& copy);
 		
-		AMateria *	clone(void) const;
-		void		use(ICharacter & target);		
+		AMateria *	clone(void) const override;
+		void		use(ICharacter & target) override;		
 };
