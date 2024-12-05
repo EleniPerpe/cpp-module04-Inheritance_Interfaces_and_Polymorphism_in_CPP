@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:59:28 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 14:34:11 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:28:31 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Character::Character(std::string name) : _name(name)
 {
 	for (int i = 0; i < this->_slots; i++)
 		this->_inventory[i] = NULL;
-	std::cout << "Character constructor wth name parameter called." << std::endl;	
+	std::cout << "Character constructor with name parameter called." << std::endl;	
 }
 
 Character::~Character()
@@ -85,7 +85,7 @@ void Character::equip(AMateria* m)
 		if(this->_inventory[i] == NULL)
 		{
 			this->_inventory[i] = m;
-			std::cout << "The " << this->_name << " got equipped with " << m 
+			std::cout << "The " << this->_name << " got equipped with " << m->getType()
 			<< " at slot " << i + 1 << " !" << std::endl;
 			return ;
 		}
@@ -102,8 +102,11 @@ void Character::unequip(int idx)
 }
 void Character::use(int idx, ICharacter& target)
 {
-	if ((idx <= 0 && idx < _slots) || this->_inventory[idx] != NULL)
+	if (idx < 0 && idx < _slots)
+		std::cout << "This is not a valid index !" << std::endl;
+	if (this->_inventory[idx] != NULL)
 		this->_inventory[idx]->use(target);
 	else
 		std::cout << "There is nothing to use with that index !" << std::endl;
+	return ;
 }

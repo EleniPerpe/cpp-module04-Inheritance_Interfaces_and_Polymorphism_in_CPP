@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:41:35 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:58:23 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 13:46:47 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ class Ice : public AMateria
 		~Ice();
 		Ice& operator=(const Ice& copy);
 		
-		AMateria *	clone(void) const override;
-		void		use(ICharacter & target) override;		
+		AMateria *	clone(void) const;
+		void		use(ICharacter & target);		
 };

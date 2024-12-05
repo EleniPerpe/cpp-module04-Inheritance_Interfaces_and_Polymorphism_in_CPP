@@ -6,13 +6,13 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:45:21 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 14:11:12 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:17:06 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice()
+Ice::Ice() : AMateria("ice")
 {
 	std::cout << "Ice default contructor called" << std::endl;
 }
@@ -42,5 +42,5 @@ AMateria* Ice::clone(void) const
 
 void Ice::use(ICharacter& target) 
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

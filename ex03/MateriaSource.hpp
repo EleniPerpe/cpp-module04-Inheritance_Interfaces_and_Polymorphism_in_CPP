@@ -6,16 +6,18 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:18:34 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:47:00 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:11:20 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource
 {
 	private:
-		static const size_t _slots = 4;
+		static const int _slots = 4;
 		AMateria* _recipes[_slots];
 		
 	public:

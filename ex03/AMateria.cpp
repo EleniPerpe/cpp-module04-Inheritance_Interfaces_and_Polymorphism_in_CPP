@@ -6,13 +6,13 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 18:17:52 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:52:38 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:15:37 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria() : _type("Unknown")
+AMateria::AMateria() : _type("")
 {
 	std::cout << "AMateria default contructor called" << std::endl;
 }

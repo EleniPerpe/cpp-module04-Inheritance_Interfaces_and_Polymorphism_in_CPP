@@ -6,18 +6,20 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:18:01 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:45:10 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:01:03 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
+#pragma once
+
 class Character : public ICharacter
 {
 	private:
-		static const size_t _slots = 4;
-		const std::string _name;
+		static const int _slots = 4;
+		std::string _name;
 		AMateria* _inventory[_slots];
 	public:
 		Character();

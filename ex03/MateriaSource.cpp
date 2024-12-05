@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:26:09 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:33:45 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:12:07 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < this->_slots; i++)
 		this->_recipes[i] = NULL;
-	return ;
 	std::cout << "MateriaSource default constructor called" << std::endl;
+	return ;
 }
 MateriaSource::MateriaSource(const MateriaSource& copy)
 {
 	for (int i = 0; i < this->_slots; i++)
 		this->_recipes[i] = NULL;
-	return ;
+	*this = copy;
 	std::cout << "MateriaSource copy constructor called" << std::endl;	
+	return ;
 }
 MateriaSource::~MateriaSource()
 {
@@ -54,8 +55,8 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& copy)
 		if (copy._recipes[i] != NULL)
 			this->_recipes[i] = copy._recipes[i]->clone();
 	}
-	return (*this);
 	std::cout << "MateriaSource assignment operator called" << std::endl;
+	return (*this);
 }
 
 
