@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 10:16:59 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/16 18:06:12 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ class WrongAnimal
 		std::string getType(void) const;
 		void setType(const std::string& type);
 
-		virtual void makeSound() const;
+		void makeSound() const;
 };

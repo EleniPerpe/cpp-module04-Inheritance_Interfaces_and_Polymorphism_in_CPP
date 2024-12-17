@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:59:28 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:28:31 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/17 11:02:53 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void Character::equip(AMateria* m)
 	if (!m)
 	{
 		std::cout << "I cannot find any materia !" << std::endl;
+		return ;
 	}
 	for (int i = 0; i < this->_slots; i++)
 	{

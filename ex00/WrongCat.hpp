@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/12/03 10:16:50 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/16 18:06:17 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ class WrongCat : public WrongAnimal
 		~WrongCat();
 		WrongCat& operator=(const WrongCat& copy);
 
-		void makeSound() const override;
+		void makeSound() const;
 };

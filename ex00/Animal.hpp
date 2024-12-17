@@ -6,7 +6,7 @@
 /*   By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:38:54 by eperperi          #+#    #+#             */
-/*   Updated: 2024/11/26 17:50:23 by eperperi         ###   ########.fr       */
+/*   Updated: 2024/12/17 10:35:40 by eperperi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ class Animal
 {
 	protected:
 		std::string _type;
+		
 	public:
 		Animal();
 		Animal(const std::string& type);
